@@ -1,0 +1,19 @@
+-start(base)
+-base(base2,base2,ext)
+Net
+Browse
+Internet
+Moo
+Luna
+Sea
+Navy
+-base2(stop,stop,ext)
+Mate
+Scape
+Point
+DotCom
+Monkey
+-ext(stop)
+ Pro
+ Explorer
+ Escape
