@@ -1,0 +1,10 @@
+<CompanyType>
+	<Specialization>Backend</Specialization>
+	<PerYear>0.3</PerYear>
+	<Min>2</Min>
+	<Max>6</Max>
+	<Types>
+		<Type Software="Web Server">1</Type>
+		<Type Software="Database">1</Type>
+	</Types>
+</CompanyType>

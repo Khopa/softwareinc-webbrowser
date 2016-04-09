@@ -1,0 +1,9 @@
+<CompanyType>
+	<Specialization>Web</Specialization>
+	<PerYear>0.2</PerYear>
+	<Min>2</Min>
+	<Max>6</Max>
+	<Types>
+		<Type Software="Website">0.5</Type>
+	</Types>
+</CompanyType>

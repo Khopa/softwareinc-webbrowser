@@ -1,0 +1,93 @@
+<SoftwareType>
+	<Name>Web Server</Name>
+	<Category>Backend</Category>
+	<Description>Serve content for the web</Description>
+	<Random>0.3</Random>
+	<Popularity>0.3</Popularity>
+	<Retention>0.9</Retention>
+	<OSSpecific>True</OSSpecific>
+	<OneClient>False</OneClient>
+	<InHouse>True</InHouse>
+	<Unlock>1990</Unlock>
+	<Iterative>1</Iterative>
+	<NameGenerator>Webserver</NameGenerator>
+	<Features>
+
+		<Feature Forced="True" Vital="True">
+			<Name>HTTP</Name>
+			<Category>Network</Category>
+			<Description>Handle HTTP requests to serve content.</Description>
+			<DevTime>2</DevTime>
+			<Innovation>3</Innovation>
+			<Usability>4</Usability>
+			<Stability>3</Stability>
+			<CodeArt>1</CodeArt>
+			<Dependency Software="Operating System">Networking</Dependency>
+		</Feature>
+
+		<Feature Forced="True" Vital="True">
+			<Name>HTTPS</Name>
+			<Category>Network</Category>
+			<Description>Security for your content.</Description>
+			<DevTime>2</DevTime>
+			<Innovation>3</Innovation>
+			<Usability>4</Usability>
+			<Stability>3</Stability>
+			<CodeArt>1</CodeArt>
+			<Dependency Software="Web Server">HTTP</Dependency>
+		</Feature>
+
+		<Feature Forced="True" Vital="True">
+			<Name>Sessions</Name>
+			<Category>Network</Category>
+			<Description>Support for user sessions.</Description>
+			<DevTime>2</DevTime>
+			<Innovation>3</Innovation>
+			<Usability>4</Usability>
+			<Stability>3</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>1997</Unlock>
+			<Dependency Software="Web Server">HTTP</Dependency>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>Load Balancing</Name>
+			<Category>Network</Category>
+			<Description>Implement basic workarounds to handle even more requests on multiple server</Description>
+			<DevTime>4</DevTime>
+			<Innovation>3</Innovation>
+			<Usability>8</Usability>
+			<Stability>3</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>1993</Unlock>
+			<Dependency Software="Operating System">Networking</Dependency>
+		</Feature>
+
+		<Feature Forced="True" Vital="True">
+			<Name>DDOS protection</Name>
+			<Category>Network</Category>
+			<Description>Add protection against Anonymous.</Description>
+			<DevTime>2</DevTime>
+			<Innovation>2</Innovation>
+			<Usability>2</Usability>
+			<Stability>4</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>2002</Unlock>
+			<Dependency Software="Web Server">Load Balancing</Dependency>
+		</Feature>
+
+		<Feature From="Load Balancing" Vital="True">
+			<Name>High Scalability</Name>
+			<Category>Network</Category>
+			<Description>Implement your Web Server as a fully dynamic and scalable cluster</Description>
+			<DevTime>4</DevTime>
+			<Innovation>3</Innovation>
+			<Usability>8</Usability>
+			<Stability>3</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>2005</Unlock>
+			<Dependency Software="Operating System">Networking</Dependency>
+		</Feature>
+
+	</Features>
+</SoftwareType>

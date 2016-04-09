@@ -1,0 +1,356 @@
+<SoftwareType>
+	<Name>Website</Name>
+	<Category>The web</Category>
+	<Description></Description>
+	<Unlock>1990</Unlock>
+	<Random>0</Random>
+	<Categories>	
+		
+		<Category Name="E-Shop">
+			<Description>A site where to buy stuff</Description>
+			<Popularity>1</Popularity>
+			<Retention>1</Retention>
+			<TimeScale>0.8</TimeScale>
+			<Iterative>1</Iterative>
+			<Unlock>1994</Unlock>
+			<NameGenerator>Eshop</NameGenerator>
+		</Category>
+
+		<Category Name="Online Dating">
+			<Description>This is the best place to meet and socialize with gorgeous... bots.</Description>
+			<Popularity>1</Popularity>
+			<Retention>1</Retention>
+			<TimeScale>0.8</TimeScale>
+			<Iterative>1</Iterative>
+			<Unlock>1996</Unlock>
+			<NameGenerator>Dating</NameGenerator>
+		</Category>
+
+		<Category Name="Forum">
+			<Description>The origin of trolling.</Description>
+			<Popularity>0.6</Popularity>
+			<Retention>1</Retention>
+			<TimeScale>0.8</TimeScale>
+			<Iterative>1</Iterative>
+			<Unlock>1990</Unlock>
+			<NameGenerator>Forum</NameGenerator>
+		</Category>
+
+		<Category Name="Social Network">
+			<Description>My space, your space, their space.</Description>
+			<Popularity>0.9</Popularity>
+			<Retention>1</Retention>
+			<TimeScale>0.8</TimeScale>
+			<Iterative>1</Iterative>
+			<Unlock>2000</Unlock>
+			<NameGenerator>SocialNetwork</NameGenerator>
+		</Category>
+
+		<Category Name="News">
+			<Description>News from the world</Description>
+			<Popularity>0.75</Popularity>
+			<Retention>0.9</Retention>
+			<TimeScale>0.7</TimeScale>
+			<Iterative>1</Iterative>
+			<Unlock>1990</Unlock>
+			<NameGenerator>News</NameGenerator>
+		</Category>
+
+	</Categories>
+
+	<OSSpecific>False</OSSpecific>
+	<OneClient>False</OneClient>
+	<InHouse>False</InHouse>
+	<Features>
+		
+		<!-- Base -->
+
+		<Feature Forced="TRUE">
+			<Name>Static pages</Name>
+			<Category>2D</Category>
+			<Description>Static page are the basis</Description>
+			<DevTime>1</DevTime>
+			<Innovation>0</Innovation>
+			<Usability>1</Usability>
+			<Stability>2</Stability>
+			<CodeArt>0.25</CodeArt>
+			<Dependency Software="Web Server">HTTP</Dependency>
+			<Server>0.00001</Server>
+		</Feature>
+		
+		<Feature From="Static pages">
+			<Name>Dynamic pages</Name>
+			<Description>Dynamic pages makes your website more attractive</Description>
+			<Category>2D</Category>
+			<DevTime>3</DevTime>
+			<Innovation>1</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>0.5</CodeArt>
+			<Unlock>1997</Unlock>
+			<Dependency Software="Web Server">HTTP</Dependency>
+			<Server>0.00002</Server>
+		</Feature>
+
+		<Feature From="Dynamic pages">
+			<Name>Reactive Pages</Name>
+			<Description>Real time single page web application are the future.</Description>
+			<Category>2D</Category>
+			<DevTime>4</DevTime>
+			<Innovation>1</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>0.6</CodeArt>
+			<Unlock>2010</Unlock>
+			<Dependency Software="Web Server">High Scalability</Dependency>
+			<Server>0.00004</Server>
+		</Feature>
+
+		<Feature>
+			<Name>Media Upload</Name>
+			<Description>Allow users to upload their own content, such as images.</Description>
+			<Category>System</Category>
+			<DevTime>1</DevTime>
+			<Innovation>1</Innovation>
+			<Usability>2</Usability>
+			<Stability>1</Stability>
+			<CodeArt>1</CodeArt>
+			<Server>0.00001</Server>
+			<Unlock>1993</Unlock>
+			<Dependency Software="Database">Compression</Dependency>
+			<Server>0.000015</Server>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>Accounts</Name>
+			<Description>Let users feels at home.</Description>
+			<Category>2D</Category>
+			<DevTime>1</DevTime>
+			<Innovation>1</Innovation>
+			<Usability>2</Usability>
+			<Stability>1</Stability>
+			<CodeArt>1</CodeArt>
+			<Server>0.00001</Server>
+			<Dependency Software="Database">Simple Query Language</Dependency>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>Chat</Name>
+			<Description>Allow users to discuss in realtime.</Description>
+			<DevTime>2</DevTime>
+			<Innovation>2</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>1995</Unlock>
+			<SoftwareCategory Category="Online Dating">0</SoftwareCategory>
+			<SoftwareCategory Category="Forum">0</SoftwareCategory>
+			<SoftwareCategory Category="Social Network">0</SoftwareCategory>
+			<Server>0.00001</Server>
+		</Feature>
+	
+		<!-- Eshop specific -->
+
+		<Feature Forced="True">
+			<Name>Cart</Name>
+			<Description>Let user select a bunch of item before checking out for payment.</Description>
+			<DevTime>2</DevTime>
+			<Innovation>2</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>1993</Unlock>
+			<Dependency Software="Website">Static pages</Dependency>
+			<SoftwareCategory Category="E-Shop">0</SoftwareCategory>
+			<Server>0.00001</Server>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>Online Payment</Name>
+			<Description>Pay securely</Description>
+			<Category>System</Category>
+			<DevTime>3</DevTime>
+			<Innovation>2</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>1995</Unlock>
+			<Dependency Software="Website">Cart</Dependency>
+			<Dependency Software="Web Server">HTTPS</Dependency>
+			<Dependency Software="CMS">Bank integration</Dependency>
+			<SoftwareCategory Category="E-Shop">0</SoftwareCategory>
+			<Server>0.00001</Server>
+		</Feature>
+
+		<!-- Dating specific -->
+		
+		<Feature Vital="True">
+			<Name>Personnality Test</Name>
+			<Description>Determine how desperate your customer are.</Description>
+			<DevTime>2</DevTime>
+			<Innovation>2</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>0.9</CodeArt>
+			<Unlock>1993</Unlock>
+			<Dependency Software="Website">Accounts</Dependency>
+			<Dependency Software="Website">Accounts</Dependency>
+			<SoftwareCategory Category="Online Dating">0</SoftwareCategory>
+			<Server>0.00001</Server>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>Bots</Name>
+			<Description>Let's pretend a lot of young ladies are already using your site.</Description>
+			<DevTime>2</DevTime>
+			<Innovation>2</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>0.8</CodeArt>
+			<Unlock>2000</Unlock>
+			<Dependency Software="Website">Accounts</Dependency>
+			<SoftwareCategory Category="Online Dating">0</SoftwareCategory>
+			<Server>0.00001</Server>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>Advanced matching algorithms</Name>
+			<Description>Make compatibles peoples meet.</Description>
+			<DevTime>2</DevTime>
+			<Innovation>2</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>0.9</CodeArt>
+			<Unlock>2000</Unlock>
+			<Dependency Software="Website">Personnality Test</Dependency>
+			<SoftwareCategory Category="Online Dating">0</SoftwareCategory>
+			<Server>0.00001</Server>
+		</Feature>
+
+		<!-- News Specific -->
+
+		<Feature Forced="True" Vital="True">
+			<Name>News Articles</Name>
+			<Description>Let users see news on your website.</Description>
+			<DevTime>1</DevTime>
+			<Innovation>1</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>0.7</CodeArt>
+			<Unlock>1990</Unlock>
+			<Dependency Software="Website">Static pages</Dependency>
+			<SoftwareCategory Category="News">0</SoftwareCategory>
+			<Server>0.00001</Server>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>RSS Feeds</Name>
+			<Description>Let users subscribe easily using this standard.</Description>
+			<DevTime>1</DevTime>
+			<Innovation>2</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>2000</Unlock>
+			<Dependency Software="Website">Static pages</Dependency>
+			<SoftwareCategory Category="News">0</SoftwareCategory>
+			<SoftwareCategory Category="Forum">0</SoftwareCategory>
+			<Server>0.00001</Server>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>News-Writing Bot</Name>
+			<Description>Let a bot write all the articles for your website so that more articles can be produced.</Description>
+			<DevTime>1</DevTime>
+			<Innovation>8</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>2018</Unlock>
+			<Dependency Software="Website">Static pages</Dependency>
+			<SoftwareCategory Category="News">0</SoftwareCategory>
+			<Server>0.00001</Server>
+		</Feature>
+
+		<!-- Forum specific -->
+
+		<Feature Vital="True">
+			<Name>Comment</Name>
+			<Description>Let users troll.</Description>
+			<DevTime>1</DevTime>
+			<Innovation>1</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>1991</Unlock>
+			<Dependency Software="Database">Simple Query Language</Dependency>
+			<SoftwareCategory Category="Forum">0</SoftwareCategory>
+			<SoftwareCategory Category="Social Network">0</SoftwareCategory>
+			<Server>0.00001</Server>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>Categories</Name>
+			<Description>Let users access different content categories.</Description>
+			<DevTime>1</DevTime>
+			<Innovation>1</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>1992</Unlock>
+			<Dependency Software="Website">Static pages</Dependency>
+			<Dependency Software="Database">Simple Query Language</Dependency>
+			<SoftwareCategory Category="Forum">0</SoftwareCategory>
+			<Server>0.00001</Server>
+		</Feature>
+
+		<!-- SN specific -->
+
+		<Feature Vital="True">
+			<Name>Subscription</Name>
+			<Description>Let users subscribe to other peoples.</Description>
+			<DevTime>1</DevTime>
+			<Innovation>1</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>2001</Unlock>
+			<Dependency Software="Website">Static pages</Dependency>
+			<Dependency Software="Database">Simple Query Language</Dependency>
+			<SoftwareCategory Category="Social Network">0</SoftwareCategory>
+			<Server>0.00001</Server>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>Microblogging</Name>
+			<Description>Include a microblogging feed.</Description>
+			<DevTime>1</DevTime>
+			<Innovation>1</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>2003</Unlock>
+			<Dependency Software="Website">Static pages</Dependency>
+			<Dependency Software="Database">Simple Query Language</Dependency>
+			<SoftwareCategory Category="Social Network">0</SoftwareCategory>
+			<Server>0.00001</Server>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>Privacy Options</Name>
+			<Description>Give a feeling of safety to your users.</Description>
+			<DevTime>1</DevTime>
+			<Innovation>1</Innovation>
+			<Usability>1</Usability>
+			<Stability>1</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>2005</Unlock>
+			<Dependency Software="Website">Static pages</Dependency>
+			<Dependency Software="Web Server">HTTPS</Dependency>
+			<Dependency Software="Database">Simple Query Language</Dependency>
+			<SoftwareCategory Category="Social Network">0</SoftwareCategory>
+			<Server>0.00001</Server>
+		</Feature>
+
+	</Features>
+</SoftwareType>

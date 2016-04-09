@@ -1,0 +1,102 @@
+<SoftwareType>
+	<Name>Database</Name>
+	<Category>Backend</Category>
+	<Description>Store data on server for any usage</Description>
+	<Random>0.2</Random>
+	<Popularity>0.4</Popularity>
+	<Retention>0.9</Retention>
+	<OSSpecific>True</OSSpecific>
+	<OneClient>False</OneClient>
+	<InHouse>True</InHouse>
+	<Unlock>1985</Unlock>
+	<Iterative>1</Iterative>
+	<NameGenerator>Database</NameGenerator>
+	<Features>
+
+		<Feature Forced="True" Vital="True">
+			<Name>Simple Query Language</Name>
+			<Category>System</Category>
+			<Description>Add a query language to access the data from command line.</Description>
+			<DevTime>4</DevTime>
+			<Innovation>3</Innovation>
+			<Usability>4</Usability>
+			<Stability>3</Stability>
+			<CodeArt>1</CodeArt>
+			<Dependency Software="Operating System">Terminal</Dependency>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>Encryption</Name>
+			<Category>System</Category>
+			<Description>Add encryption algorithms to give the illusion of security.</Description>
+			<DevTime>4</DevTime>
+			<Innovation>6</Innovation>
+			<Usability>4</Usability>
+			<Stability>4</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>1990</Unlock>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>Compression</Name>
+			<Category>System</Category>
+			<Description>Compress the data to save precious disk space.</Description>
+			<DevTime>4</DevTime>
+			<Innovation>6</Innovation>
+			<Usability>4</Usability>
+			<Stability>4</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>1992</Unlock>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>GUI</Name>
+			<Category>2D</Category>
+			<Description>Provide client tools with graphical user interface to interact with the database.</Description>
+			<DevTime>1</DevTime>
+			<Innovation>1</Innovation>
+			<Usability>4</Usability>
+			<Stability>1</Stability>
+			<CodeArt>0.8</CodeArt>
+			<Unlock>1985</Unlock>
+			<Dependency Software="Operating System">GUI</Dependency>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>Data relationships</Name>
+			<Category>System</Category>
+			<Description>Allow to create complex relationships between data models.</Description>
+			<DevTime>1</DevTime>
+			<Innovation>1</Innovation>
+			<Usability>4</Usability>
+			<Stability>1</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>1993</Unlock>
+		</Feature>
+
+		<Feature Vital="True">
+			<Name>Indexing</Name>
+			<Category>System</Category>
+			<Description>Creating indexes will eat up your precious kilobytes, but significantly improve performance.</Description>
+			<DevTime>4</DevTime>
+			<Innovation>6</Innovation>
+			<Usability>6</Usability>
+			<Stability>6</Stability>
+			<CodeArt>1</CodeArt>
+			<Unlock>1995</Unlock>
+			<Dependency Software="Database">Compression</Dependency>
+		</Feature>
+
+		<Feature Vital="True" From="Simple Query Language">
+			<Name>NO SQL</Name>
+			<Category>System</Category>
+			<Description>Not Only SQL, and a document oriented database for more flexibility in your data model.</Description>
+			<DevTime>4</DevTime>
+			<Innovation>3</Innovation>
+			<Usability>4</Usability>
+			<Stability>3</Stability>
+			<CodeArt>1</CodeArt>
+		</Feature>
+
+	</Features>
+</SoftwareType>
